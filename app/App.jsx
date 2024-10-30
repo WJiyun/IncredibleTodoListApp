@@ -4,12 +4,19 @@ import ToDoList from './ToDoList';
 import ToDoForm from './ToDoForm';
 
 function App() {
+  const [tasks, setTasks] = useState([
+    'Do laundry',
+    'Go to gym',
+    'Walk dog'
+  ]);
+  
   return (
     <SafeAreaView>
-      <ToDoList />
-      <ToDoForm />
+      <ToDoList tasks={tasks} />
+      <ToDoForm setTasks={setTasks} />
     </SafeAreaView>
   );
 }
+
 
 export default App;
